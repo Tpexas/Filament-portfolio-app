@@ -1,0 +1,36 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "temp": "vite build",
+        "css": "postcss assets/styles/main.css -o assets/styles/main.min.css --verbose",
+        "server-reload": "browser-sync start --config './browser-sync-config.js'",
+        "develop": "concurrently 'npm:css -- --watch' 'npm:server-reload'",
+        "build": "npm run css -- --env 'production'",
+        "format": "npx prettier ./**/*.html"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "> 1%"
+    ],
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/typography": "^0.5.9",
+        "autoprefixer": "^10.4.14",
+        "axios": "^1.1.2",
+        "browser-sync": "^2.27.7",
+        "concurrently": "^7.0.0",
+        "cssnano": "^5.0.17",
+        "laravel-vite-plugin": "^0.7.5",
+        "postcss": "^8.4.23",
+        "postcss-cli": "^9.1.0",
+        "postcss-import": "^15.1.0",
+        "prettier": "^2.5.1",
+        "prettier-plugin-tailwindcss": "^0.1.8",
+        "tailwindcss": "^3.3.2",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "alpinejs": "^3.12.1"
+    }
+}
