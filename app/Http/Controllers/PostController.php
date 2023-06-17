@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index(): View
     {
         $posts = Post::query()->where([['active', '=', 1], ['showcase', '=', 1]])->whereDate('published_at', '<', Carbon::now())
-        ->orderBy('published_at', 'desc')->paginate(4);
+        ->orderBy('published_at', 'asc')->paginate(4);
         $author = AuthorInfo::first();
         return view('home', compact(['posts', 'author']));
     }
@@ -24,7 +24,7 @@ class PostController extends Controller
     public function indexProjects()
     {
         $posts = Post::query()->where('active', '=', 1)->whereDate('published_at', '<', Carbon::now())
-        ->orderBy('published_at', 'desc')->paginate(6);
+        ->orderBy('created_at', 'desc')->paginate(6);
         return view('post.index', compact('posts'));
     }
 

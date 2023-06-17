@@ -68,14 +68,16 @@
                                     $category->title }}</span>
                                 @endforeach
                             </div>
-                            <a href="/{{ $post->slug }}" class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green
-                                 dark:text-white dark:hover:text-secondary mb-4">{{ $post->title }}</a>
+                            <a href="/{{ $post->slug }}" class="flex  font-body text-lg font-semibold text-primary transition-colors hover:text-green
+                                 dark:text-white dark:hover:text-secondary mb-4">{{ $post->title }} <i
+                                    class='bx bx-chevrons-right self-center pl-2 text-2xl'></i></a>
+
                         </div>
                         <div class="md:col-span-2 col-span-3">
                             <div class="text-white flex items-center justify-center" x-data="carouselFilter()">
                                 <div class="container grid grid-cols-1">
 
-                                    <div class="row-start-2 col-start-1 z-40" x-show="active == 0"
+                                    <div class="row-start-2 col-start-1 " x-show="active == 0"
                                         x-transition:enter="transition ease-out duration-300"
                                         x-transition:enter-start="opacity-0 transform scale-90"
                                         x-transition:enter-end="opacity-100 transform scale-100"

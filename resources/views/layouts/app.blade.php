@@ -50,7 +50,12 @@
     <script>
         hljs.initHighlightingOnLoad();
     </script>
-    @vite(['resources/css/main.css','resources/js/app.js'])
+    @vite(['resources/css/app.css','resources/js/app.js'])
+
+
+    {{--
+    <link href="{{ asset('build/assets/app-a113f558.css') }}" rel="stylesheet">
+    <script src="{{ asset('build/assets/app-e7c8c463.js') }}" defer></script> --}}
 </head>
 
 
@@ -62,7 +67,7 @@
             <div class="flex items-center justify-between py-6 lg:py-10">
                 <a href="/" class="flex items-center">
                     <span href="/" class="mr-2">
-                        <img src="/storage/{{$author->logo}}" class="h-16 w-16" alt="logo" />
+                        <img src="/storage/{{$author->logo}}" class="h-9 w-16 object-cover" alt="logo" />
                     </span>
                     <p class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
                         {{$author->title}}
@@ -86,34 +91,34 @@
 
                         <li class="group relative mr-6 mb-1">
                             <div
-                                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
+                                class="absolute left-0 bottom-0 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
                             </div>
                             <a href="/"
-                                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Intro</a>
+                                class="relative  block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Intro</a>
                         </li>
 
                         <li class="group relative mr-6 mb-1">
                             <div
-                                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
+                                class="absolute left-0 bottom-0  h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
                             </div>
                             <a href="/projects"
-                                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Projects</a>
+                                class="relative  block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Projects</a>
                         </li>
 
                         <li class="group relative mr-6 mb-1">
                             <div
-                                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
+                                class="absolute left-0 bottom-0  h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
                             </div>
                             <a href="/about-me"
-                                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">About</a>
+                                class="relative  block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">About</a>
                         </li>
 
                         <li class="group relative mr-6 mb-1">
                             <div
-                                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
+                                class="absolute left-0 bottom-0  h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
                             </div>
                             <a href="/contact"
-                                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Contact</a>
+                                class="relative  block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Contact</a>
                         </li>
 
                         <li>
@@ -161,7 +166,7 @@
                 class="flex flex-col items-center justify-between border-t border-grey-lighter py-10 sm:flex-row sm:py-12">
                 <div class="mr-auto flex flex-col items-center sm:flex-row">
                     <a href="/" class="mr-auto sm:mr-6">
-                        <img src="/assets/img/logo.svg" alt="logo" />
+                        <img src="/storage/{{$author->logo}}" class="h-9 w-16 object-cover" alt="logo" />
                     </a>
                     <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
                         ©

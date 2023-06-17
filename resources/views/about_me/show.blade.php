@@ -9,9 +9,7 @@
                     About me
                 </h1>
 
-                <div class="pt-16 lg:pt-20 text-primary dark:text-white">
-                    <div class="prose dark:prose-dark">{!!$author->about_body!!}</div>
-                </div>
+                <div class="prose dark:prose-dark pt-16 lg:pt-20 min-w-full">{!!$author->about_body!!}</div>
             </div>
         </div>
     </div>
